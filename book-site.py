@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://books.toscrape.com/catalogue/category/books/travel_2/index.html'
+url = 'https://books.toscrape.com/catalogue/category/books/travel_2/index.html'    # check the HTML structure in Chrome Debugger!!! do it on WINDOWS
 response = requests.get(url)
 
 soup = BeautifulSoup(response.text, 'html5lib')
