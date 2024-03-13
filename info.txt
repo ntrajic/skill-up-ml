@@ -1,0 +1,411 @@
+>>> import ssl
+>>> 
+>>> try:
+...     _create_unverified_https_context = ssl._create_unverified_context
+... except AttributeError:
+...     pass
+... else:
+...     ssl._create_default_https_context = _create_unverified_https_context
+... 
+>>> 
+>>> nltk.download()    # on the client Py interpereter prompt, paste from 1 to here
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nltk' is not defined
+>>> exit()
+(base) 00:46 ~/skill-up-ml (main)$ pip install nltk
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: /usr/share/pip-wheels
+Collecting nltk
+  Downloading nltk-3.8.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting click (from nltk)
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting joblib (from nltk)
+  Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting regex>=2021.8.3 (from nltk)
+  Downloading regex-2023.12.25-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 962.0 kB/s eta 0:00:00
+Requirement already satisfied: tqdm in /opt/conda/lib/python3.11/site-packages (from nltk) (4.65.0)
+Downloading nltk-3.8.1-py3-none-any.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 33.7 MB/s eta 0:00:00
+Downloading regex-2023.12.25-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (785 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 785.1/785.1 kB 16.3 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 2.1 MB/s eta 0:00:00
+Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 kB 7.0 MB/s eta 0:00:00
+Installing collected packages: regex, joblib, click, nltk
+  WARNING: The script nltk is installed in '/home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed click-8.1.7 joblib-1.3.2 nltk-3.8.1 regex-2023.12.25
+(base) 00:46 ~/skill-up-ml (main)$ python
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import nltk
+>>> import ssl
+>>> 
+>>> try:
+...     _create_unverified_https_context = ssl._create_unverified_context
+... except AttributeError:
+...     pass
+... else:
+...     ssl._create_default_https_context = _create_unverified_https_context
+... 
+>>> 
+>>> nltk.download()    # on the client Py interpereter prompt, paste from 1 to here
+NLTK Downloader
+---------------------------------------------------------------------------
+    d) Download   l) List    u) Update   c) Config   h) Help   q) Quit
+---------------------------------------------------------------------------
+Downloader> 1
+Command '1' unrecognized
+
+---------------------------------------------------------------------------
+    d) Download   l) List    u) Update   c) Config   h) Help   q) Quit
+---------------------------------------------------------------------------
+Downloader> help
+Command 'help' unrecognized
+
+---------------------------------------------------------------------------
+    d) Download   l) List    u) Update   c) Config   h) Help   q) Quit
+---------------------------------------------------------------------------
+Downloader> d
+
+Download which package (l=list; x=cancel)?
+  Identifier> all
+    Downloading collection 'all'
+       | 
+       | Downloading package abc to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/abc.zip.
+       | Downloading package alpino to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/alpino.zip.
+       | Downloading package averaged_perceptron_tagger to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping taggers/averaged_perceptron_tagger.zip.
+       | Downloading package averaged_perceptron_tagger_ru to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping taggers/averaged_perceptron_tagger_ru.zip.
+       | Downloading package basque_grammars to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping grammars/basque_grammars.zip.
+       | Downloading package bcp47 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package biocreative_ppi to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/biocreative_ppi.zip.
+       | Downloading package bllip_wsj_no_aux to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping models/bllip_wsj_no_aux.zip.
+       | Downloading package book_grammars to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping grammars/book_grammars.zip.
+       | Downloading package brown to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/brown.zip.
+       | Downloading package brown_tei to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/brown_tei.zip.
+       | Downloading package cess_cat to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/cess_cat.zip.
+       | Downloading package cess_esp to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/cess_esp.zip.
+       | Downloading package chat80 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/chat80.zip.
+       | Downloading package city_database to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/city_database.zip.
+       | Downloading package cmudict to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/cmudict.zip.
+       | Downloading package comparative_sentences to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/comparative_sentences.zip.
+       | Downloading package comtrans to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package conll2000 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/conll2000.zip.
+       | Downloading package conll2002 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/conll2002.zip.
+       | Downloading package conll2007 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package crubadan to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/crubadan.zip.
+       | Downloading package dependency_treebank to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/dependency_treebank.zip.
+       | Downloading package dolch to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/dolch.zip.
+       | Downloading package europarl_raw to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/europarl_raw.zip.
+       | Downloading package extended_omw to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package floresta to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/floresta.zip.
+       | Downloading package framenet_v15 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/framenet_v15.zip.
+       | Downloading package framenet_v17 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/framenet_v17.zip.
+
+
+
+\
+
+
+
+
+
+
+
+
+       | Downloading package gazetteers to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/gazetteers.zip.
+       | Downloading package genesis to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/genesis.zip.
+       | Downloading package gutenberg to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/gutenberg.zip.
+       | Downloading package ieer to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/ieer.zip.
+       | Downloading package inaugural to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/inaugural.zip.
+       | Downloading package indian to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/indian.zip.
+       | Downloading package jeita to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package kimmo to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/kimmo.zip.
+       | Downloading package knbc to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package large_grammars to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping grammars/large_grammars.zip.
+       | Downloading package lin_thesaurus to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/lin_thesaurus.zip.
+       | Downloading package mac_morpho to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/mac_morpho.zip.
+       | Downloading package machado to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package masc_tagged to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package maxent_ne_chunker to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping chunkers/maxent_ne_chunker.zip.
+       | Downloading package maxent_treebank_pos_tagger to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping taggers/maxent_treebank_pos_tagger.zip.
+       | Downloading package moses_sample to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping models/moses_sample.zip.
+       | Downloading package movie_reviews to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Package movie_reviews is already up-to-date!
+       | Downloading package mte_teip5 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/mte_teip5.zip.
+       | Downloading package mwa_ppdb to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping misc/mwa_ppdb.zip.
+       | Downloading package names to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/names.zip.
+       | Downloading package nombank.1.0 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package nonbreaking_prefixes to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/nonbreaking_prefixes.zip.
+       | Downloading package nps_chat to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/nps_chat.zip.
+       | Downloading package omw to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package omw-1.4 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package opinion_lexicon to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/opinion_lexicon.zip.
+       | Downloading package panlex_swadesh to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       | Downloading package paradigms to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/paradigms.zip.
+       | Downloading package pe08 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/pe08.zip.
+       | Downloading package perluniprops to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping misc/perluniprops.zip.
+       | Downloading package pil to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/pil.zip.
+       | Downloading package pl196x to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/pl196x.zip.
+       | Downloading package porter_test to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping stemmers/porter_test.zip.
+       | Downloading package ppattach to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/ppattach.zip.
+       | Downloading package problem_reports to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/problem_reports.zip.
+       | Downloading package product_reviews_1 to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/product_reviews_1.zip.
+       | Downloading package product_reviews_2 to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/product_reviews_2.zip.
+       | Downloading package propbank to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package pros_cons to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/pros_cons.zip.
+       | Downloading package ptb to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/ptb.zip.
+       | Downloading package punkt to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping tokenizers/punkt.zip.
+       | Downloading package qc to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/qc.zip.
+       | Downloading package reuters to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package rslp to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping stemmers/rslp.zip.
+       | Downloading package rte to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/rte.zip.
+       | Downloading package sample_grammars to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping grammars/sample_grammars.zip.
+       | Downloading package semcor to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package senseval to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/senseval.zip.
+       | Downloading package sentence_polarity to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/sentence_polarity.zip.
+       | Downloading package sentiwordnet to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/sentiwordnet.zip.
+       | Downloading package shakespeare to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/shakespeare.zip.
+       | Downloading package sinica_treebank to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/sinica_treebank.zip.
+       | Downloading package smultron to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/smultron.zip.
+       | Downloading package snowball_data to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       | Downloading package spanish_grammars to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping grammars/spanish_grammars.zip.
+       | Downloading package state_union to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/state_union.zip.
+       | Downloading package stopwords to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/stopwords.zip.
+       | Downloading package subjectivity to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Package subjectivity is already up-to-date!
+       | Downloading package swadesh to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/swadesh.zip.
+       | Downloading package switchboard to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/switchboard.zip.
+       | Downloading package tagsets to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping help/tagsets.zip.
+       | Downloading package timit to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/timit.zip.
+       | Downloading package toolbox to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/toolbox.zip.
+       | Downloading package treebank to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/treebank.zip.
+       | Downloading package twitter_samples to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/twitter_samples.zip.
+       | Downloading package udhr to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/udhr.zip.
+       | Downloading package udhr2 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/udhr2.zip.
+       | Downloading package unicode_samples to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/unicode_samples.zip.
+       | Downloading package universal_tagset to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping taggers/universal_tagset.zip.
+       | Downloading package universal_treebanks_v20 to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       | Downloading package vader_lexicon to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Package vader_lexicon is already up-to-date!
+       | Downloading package verbnet to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/verbnet.zip.
+       | Downloading package verbnet3 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/verbnet3.zip.
+       | Downloading package webtext to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/webtext.zip.
+       | Downloading package wmt15_eval to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping models/wmt15_eval.zip.
+       | Downloading package word2vec_sample to
+       |     /home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/nltk_data...
+       |   Unzipping models/word2vec_sample.zip.
+       | Downloading package wordnet to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package wordnet2021 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package wordnet2022 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/wordnet2022.zip.
+       | Downloading package wordnet31 to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       | Downloading package wordnet_ic to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/wordnet_ic.zip.
+       | Downloading package words to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/words.zip.
+       | Downloading package ycoe to /home/8ea0fabe-4380-46fc-
+       |     af9f-4f97a04478a3/nltk_data...
+       |   Unzipping corpora/ycoe.zip.
+       | 
+     Done downloading collection all
+
