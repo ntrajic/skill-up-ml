@@ -26,6 +26,40 @@ articles = []
 for item in soup.find_all('tr', class_='athing'):
     title_tag = item.find('span', class_='titleline').find('a')
     title = title_tag.text
+    #print(title_tag.text)                                               # all titles
+    #OUT:
+    # Nvtop: Linux Task Monitor for Nvidia, AMD and Intel GPUs
+    # Building Meta's GenAI infrastructure
+    # How Mandelbrot set images are affected by floating point precision
+    # Bluesky's stackable approach to moderation
+    # Multi-Threading and Mutation
+    # Launch HN: Glide (YC W24) – AI-assisted technical design docs
+    # LOCS: Language developed at age 9 in Z80 machine code (1988)
+    # Weather forecasts have become more accurate
+    # Vulkan Foliage rendering using GPU Instancing
+    # How to colorize Game Boy games – Backgrounds
+    # Apple announces ability to download apps directly from websites in EU
+    # Chyrp Lite – An Ultra-Lightweight Tumblelogging Engine Using PHP and SQLite
+    # To write a great essay, think and care deeply (2015)
+    # Screen Space Reflection
+    # Byte-Sized Swift: Building Tiny Games for the Playdate
+    # Direct File officially opens in 12 pilot states
+    # Show HN: Comma Separated Values (CSV) to Unicode Separated Values (USV)
+    # 40 Years of Programming
+    # Deterministic simulation testing for our entire SaaS
+    # How engineers straightened the Leaning Tower of Pisa [video]
+    # A ragtag band of internet friends became the best at forecasting world events
+    # The NYPD sent a warrantless subpoena for a copwatcher's Twitter account
+    # Open Policy Agent
+    # The invention of blue and purple pigments in ancient times (2006)
+    # Infisical (YC W23) is hiring to build an open-source secret management platform
+    # Japan's Space One rocket explodes seconds after liftoff
+    # Vehicle brakes produce charged particles that may harm public health: study
+    # Quantum Soccer (2009)
+    # The complete story of Gödel incompleteness
+    # Fig is sunsetting
+
+    # EXTRACT URL LINKS for each TITLE
     link = title_tag.get('href', 'N/A')
     new_article = {
         'title': title,
@@ -40,6 +74,7 @@ print(articles)
 
 # OUT:
 # (PilotPythonProject) C:\SRC\Py\teasers\ShaunWasselsFP\EPIV>python scraping-basics.py
+# OUT:
 # [{'title': 'Nvtop: Linux Task Monitor for Nvidia, AMD and Intel GPUs', 'link': 'https://github.com/Syllo/nvtop', 'upvotes': '57 points'}, {'title': "Building Meta's GenAI infrastructure", 'link': 'https://engineering.fb.com/2024/03/12/
 # data-center-engineering/building-metas-genai-infrastructure/', 'upvotes': '490 points'}, {'title': 'How Mandelbrot set images are affected by floating point precision', 'link': 'https://github.com/ProfJski/FloatCompMandelbrot', 'upvote
 # s': '148 points'}, {'title': "Bluesky's stackable approach to moderation", 'link': 'https://bsky.social/about/blog/03-12-2024-stackable-moderation', 'upvotes': '33 points'}, {'title': 'Multi-Threading and Mutation', 'link': 'https://ww
