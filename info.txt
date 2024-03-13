@@ -409,3 +409,70 @@ Download which package (l=list; x=cancel)?
        | 
      Done downloading collection all
 
+
+
+
+
+Python progam customer-service.py allows customer inputs on a message prompt, and then spits sentiment of the input message:
+
+(base) 00:54 ~/skill-up-ml (main)$ python customer-service.py
+Message: Your hair is beautiful!
+Positive comment!
+Message: This dish is terrible!
+Negative Commment!
+Message: I am eating lunch.
+Neutral Comment
+Message: 
+
+
+
+
+
+
+# bash> pip install opencv-python <enter>
+
+OUT:
+(base) 01:31 ~/skill-up-ml (main)$ pip install opencv-python
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: /usr/share/pip-wheels
+Collecting opencv-python
+  Downloading opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting numpy>=1.21.2 (from opencv-python)
+  Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 1.8 MB/s eta 0:00:00
+Downloading opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 MB 22.2 MB/s eta 0:00:00
+Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 51.5 MB/s eta 0:00:00
+Installing collected packages: numpy, opencv-python
+  WARNING: The script f2py is installed in '/home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-1.26.4 opencv-python-4.9.0.80
+(base) 01:38 ~/skill-up-ml (main)$ 
+
+bash> base) 01:43 ~/skill-up-ml (main)$>       pip install PyQt5  <enter>
+OUT:
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: /usr/share/pip-wheels
+Collecting PyQt5
+  Downloading PyQt5-5.15.10-cp37-abi3-manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting PyQt5-sip<13,>=12.13 (from PyQt5)
+  Downloading PyQt5_sip-12.13.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (504 bytes)
+Collecting PyQt5-Qt5>=5.15.2 (from PyQt5)
+  Downloading PyQt5_Qt5-5.15.2-py3-none-manylinux2014_x86_64.whl.metadata (535 bytes)
+Downloading PyQt5-5.15.10-cp37-abi3-manylinux_2_17_x86_64.whl (8.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 61.1 MB/s eta 0:00:00
+Downloading PyQt5_Qt5-5.15.2-py3-none-manylinux2014_x86_64.whl (59.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.9/59.9 MB 22.2 MB/s eta 0:00:00
+Downloading PyQt5_sip-12.13.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl (346 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.7/346.7 kB 10.5 MB/s eta 0:00:00
+Installing collected packages: PyQt5-Qt5, PyQt5-sip, PyQt5
+  WARNING: The scripts pylupdate5, pyrcc5 and pyuic5 are installed in '/home/8ea0fabe-4380-46fc-af9f-4f97a04478a3/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed PyQt5-5.15.10 PyQt5-Qt5-5.15.2 PyQt5-sip-12.13.0
+
+
+
+
+ sudo apt-get install xvfb
+
